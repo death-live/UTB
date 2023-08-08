@@ -8,8 +8,18 @@
 
 using namespace std;
 
+void SystemCls()
+{
+    #ifdef _WIN32
+    system("cls");
+  #else
+    system("clear");
+  #endif
+}
+
 int main()
 {
+    SystemCls();
     int resp, rdata;
     Piramide piramide(15, 20);
     piramide.sqt();
@@ -23,7 +33,7 @@ int main()
         cout << "¿Quiere ingresar los datos?" << endl;
         cout << "[1]si   [2]no" << endl;
         cin >> resp;
-        system("clear");
+        SystemCls();
     } while (resp != 1 and resp != 2);
 
     switch (resp)
@@ -36,7 +46,7 @@ int main()
             cout << "[1](Altura y Area de la base)   [2](Altura y lado de la base)"
                  << endl;
             cin >> rdata;
-            system("clear");
+            SystemCls();
         } while (rdata != 1 and rdata != 2);
 
         break;
@@ -73,11 +83,11 @@ int main()
     {
         do
         {
-            system("clear");
+            SystemCls();
             cout << "¿Que datos quiere conocer?" << endl;
             cout << "[1]Altura   [2]Area de la base  [3]Lado de la base  [4]Volumen de la piramide  [5]Area de la piramide  [6]Perimetro de la base" << endl;
             cin >> rdata;
-            system("clear");
+            SystemCls();
             switch (rdata)
             {
             case 1:
@@ -108,12 +118,13 @@ int main()
         cout << "¿Quiere conocer otros datos?" << endl;
         cout << "[1]si   [otro numero]no" << endl;
         cin >> resp;
-        system("clear");
+        SystemCls();
 
     } while (resp == 1);
-    system("clear");
+    SystemCls();
 
     cout << "end" << endl;
     system("pause");
+    SystemCls();
     return 0;
 }
