@@ -1,5 +1,5 @@
-#include "Piramide.h"
-#include "Piramide.cpp"
+#include "Piramide.h"//iniclude library AO
+#include "Piramide.cpp"//inclide .cpp fot libreaty
 #include <cmath>
 #include <iostream>
 #include <ostream>
@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void SystemCls()
+void SystemCls()//detect win32 and using cls or clear 
 {
     #ifdef _WIN32
     system("cls");
@@ -20,8 +20,8 @@ void SystemCls()
 int main()
 {
     SystemCls();
-    int resp, rdata;
-    Piramide piramide(15, 20);
+    int resp, rdata;//couts
+    Piramide piramide(15, 20);//iniciate obj to class Piramide
     piramide.sqt();
 
     cout << "Piramide" << endl;
