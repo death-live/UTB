@@ -112,7 +112,7 @@ int main()
                 break;
             }
 
-        } while (rdata != 1 and rdata != 2 and rdata != 3 and rdata != 4 and rdata != 5 and rdata != 6);
+        } while (rdata < 1 and rdata > 6);
         cout << endl;
         cout << endl;
         cout << "¿Quiere conocer otros datos?" << endl;
