@@ -21,6 +21,7 @@ public:
     void perimeter();                  // perimeter function of triangle of base pyramid(class Piramide)
     void area_bs();                    // function of area of base( Var data == base)
     void sqt();                        // function for find the size of side of equilateral triangle
+    void imnprim(); // function for
 };
 
 #endif // !PIRAMIDE_H

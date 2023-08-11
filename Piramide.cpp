@@ -5,6 +5,15 @@
 
 using namespace std;
 
+void SystemCls()
+{
+    #ifdef _WIN32
+    system("cls");
+  #else
+    system("clear");
+  #endif
+}
+
 Piramide::Piramide(double _height, double _base)
 {
     height = _height;
@@ -68,4 +77,50 @@ void Piramide::perimeter()
 void Piramide::sqt()
 {
     side_eqt = sqrt(sqrt(16 * pow(base, 2) / 3));
+}
+void Piramide::imnprim()
+{
+    int rdata, resp;
+     do
+    {
+        do
+        {
+            SystemCls();
+            cout << "¿Que datos quiere conocer?" << endl;
+            cout << "[1]Altura   [2]Area de la base  [3]Lado de la base  [4]Volumen de la piramide  [5]Area de la piramide  [6]Perimetro de la base" << endl;
+            cin >> rdata;
+            SystemCls();
+            switch (rdata)
+            {
+            case 1:
+                cout << "Altura: " << getheight() << endl;
+                break;
+            case 2:
+                cout << "Area de la base: " << getbase() << endl;
+                break;
+            case 3:
+                cout << "El lado de la base es: " << getside_eqt() << endl;
+                break;
+            case 4:
+                volume();
+                break;
+            case 5:
+                area();
+                break;
+            case 6:
+                perimeter();
+                break;
+            default:
+                break;
+            }
+
+        } while (rdata < 1 or rdata > 6);
+        cout << endl;
+        cout << endl;
+        cout << "¿Quiere conocer otros datos?" << endl;
+        cout << "[1]si   [otro numero]no" << endl;
+        cin >> resp;
+        SystemCls();
+
+    } while (resp == 1);
 }
